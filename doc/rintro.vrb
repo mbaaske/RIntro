@@ -1,1 +1,22 @@
-\frametitle{\proglang {R} data frame object}
+\frametitle{\proglang {R} Practice}
+\begin{enumerate}
+ \item Generate standard normal random variables, check characteristics and use
+ different sample sizes!
+ \item Construct a numeric vector and sort this in ascending order using
+ function \textit{sort()}.
+ \item Delete first row of data frame `g`. Add some new category. Change number
+ of students `Anz` in in `MPV`.
+ \item Load data set \textit{airquality}:
+\begin{Schunk}
+\begin{Sinput}
+R> data(airquality)
+R> head(airquality)
+\end{Sinput}
+\end{Schunk}
+Check for `NAs` and omit these by functions \textit{is.na()} and
+\textit{na.omit()} What is it about? Write a function
+ which calculates the means and standard deviations of categories `Ozone`,`Solar.R`, `Wind` and `Temp` from data set
+ \textit{airquality} for each month separately. THe function returns a matrix of
+ dimensions $5\times 2$ where the first columnstores the means and the second
+ the standard errors of all month.
+\end{enumerate}

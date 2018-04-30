@@ -44,6 +44,7 @@ global environment). Some useful links are
 %
 \begin{frame}[fragile]{\proglang{R} Basics}
 <<echo=FALSE>>=
+rm(list=ls())
 options(useFancyQuotes="UTF-8")
 options(digits=4, prompt="R> ")
 @
@@ -114,7 +115,7 @@ try(x[4])                          # catch error
 
 \begin{frame}[fragile]{\proglang{R} object classes}
 <<>>=
-		class(1.7) # "numeric"
+class(1.7) # "numeric"
 class(x)   # "character" = character vector
 class(y)   # "factor" categories
 class(z)
@@ -129,7 +130,7 @@ class(z)
 \begin{frame}[fragile]{Characters and categories}
 <<eval=FALSE>>=
 # Save contents of workspace, into the file .RData
-		save.image()
+save.image()
 # Save into the file archive.RData
 save.image(file="archive.RData")
 # save single objects
@@ -141,7 +142,7 @@ XYZ <- readRDS(file="myfile.rds")
 @
 <<>>=
 # attach (reload) to current workspace
-		attach("tmpobj.RData")
+attach("tmpobj.RData")
 ls()
 @
 \end{frame}
@@ -208,6 +209,64 @@ g$Anz[1]   # select first element of `Anz`
 @
 \end{frame}
 %
-\begin{frame}[fragile]{\proglang{R} data frame object}
+\begin{frame}[fragile]{\proglang{R} statistics}
+<<>>=
+runif(n=10) # uniform on [0,1]
+rnorm(n=20,mean=5,sd=2)  # normal distribution
+rnorm(n=20)   # standard normal (mean=0, sd=1)       
+rpois(n=20,lambda=5) # Poisson with parameter lambda
+rexp(n=20,rate=5) # exponential distribution
+@
+\end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} statistical characteristics}
+<<>>=
+x <- runif(100)
+min(x)    # Minimum
+max(x)    # Maximum
+mean(x)   # Mean
+median(x) # Median
+var(x)    # variance
+sd(x)	  # standard deviation/error
+summary(x) # overview
+@
+\end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} loops}
+<<>>=
+for(i in 7:9) {print(i)}
+x <- 0
+while(x < 3){print(x); x <- x+1}
+fun <- function(x) x^2
+fun(2.3)
+@
+Logical ifs
+<<>>=
+x <- sample(1:10,size=1)
+if(x < 5) {print("Yeah!")} else {print("Oh, noo!")}
+print(x)
+@
+\end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} Practice}
+\begin{enumerate}
+ \item Generate standard normal random variables, check characteristics and use
+ different sample sizes!
+ \item Construct a numeric vector and sort this in ascending order using
+ function \textit{sort()}.
+ \item Delete first row of data frame `g`. Add some new category. Change number
+ of students `Anz` in in `MPV`.
+ \item Load data set \textit{airquality}:
+<<eval=FALSE>>=
+data(airquality)
+head(airquality)
+@ 
+Check for `NAs` and omit these by functions \textit{is.na()} and
+\textit{na.omit()} What is it about? Write a function
+ which calculates the means and standard deviations of categories `Ozone`,`Solar.R`, `Wind` and `Temp` from data set
+ \textit{airquality} for each month separately. THe function returns a matrix of
+ dimensions $5\times 2$ where the first columnstores the means and the second
+ the standard errors of all month.
+\end{enumerate}
 \end{frame}
 \end{document}
