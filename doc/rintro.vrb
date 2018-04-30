@@ -1,0 +1,25 @@
+\frametitle{Characters and categories}
+\begin{Schunk}
+\begin{Sinput}
+R> # Save contents of workspace, into the file .RData
+R> save.image()
+R> # Save into the file archive.RData
+R> save.image(file="archive.RData")
+R> # save single objects
+R> save(x, y,z, file="tmpobj.RData")
+R> # save as RDS (could be big data)
+R> saveRDS(list(x,y,z),file="myfile.rds")
+R> # read as RDS
+R> XYZ <- readRDS(file="myfile.rds")
+\end{Sinput}
+\end{Schunk}
+\begin{Schunk}
+\begin{Sinput}
+R> # attach (reload) to current workspace
+R> attach("tmpobj.RData")
+R> ls()
+\end{Sinput}
+\begin{Soutput}
+[1] "a"    "b"    "INFO" "PATH" "x"    "XYZ"  "y"    "z"
+\end{Soutput}
+\end{Schunk}
