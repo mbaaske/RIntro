@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.9.7)  30 APR 2018 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.9.7)  30 APR 2018 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1171,40 +1171,6 @@ File: ts1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-! Argument of \beamer@stripands has an extra }.
-<inserted text> 
-                \par 
-l.22 \begin{document}
-                     
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-\relax \fi {\let \inst =\@gobble \let \thanks =\@gobble \def \and {, \ETC.
-! Paragraph ended before \beamer@stripands was complete.
-<to be read again> 
-                   \par 
-l.22 \begin{document}
-                     
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Extra }, or forgotten \endgroup.
-<recently read> }
-                 
-l.22 \begin{document}
-                     
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\<def>-command' on input line 22.
@@ -1239,7 +1205,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\insertauthor' on input line 22.
+(hyperref)                removing `\beamer@temp' on input line 22.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1247,7 +1213,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@shortauthor' on input line 22.
+(hyperref)                removing `\insertinstitute' on input line 22.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1255,7 +1221,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@andstripped' on input line 22.
+(hyperref)                removing `\beamer@shortinstitute' on input line 22.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1271,7 +1237,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\beamer@andstripped' on input line 22.
+(hyperref)                removing `\insertinstitute' on input line 22.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<def>-command' on input line 22.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\beamer@shortinstitute' on input line 22.
 
 (/home/baaske/workspace/RIntro/doc/rintro.aux)
 \openout1 = `rintro.aux'.
@@ -1459,26 +1433,26 @@ LaTeX Info: Redefining \includegraphics on input line 22.
 (/home/baaske/workspace/RIntro/doc/rintro.nav) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 44.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 43.
  (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 44.
+LaTeX Font Info:    Try loading font information for U+msa on input line 43.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 44.
+LaTeX Font Info:    Try loading font information for U+msb on input line 43.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <10> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 43.
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <7> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 43.
 LaTeX Font Info:    Font shape `T1/aess/m/it' in size <5> not available
-(Font)              Font shape `T1/aess/m/sl' tried instead on input line 44.
+(Font)              Font shape `T1/aess/m/sl' tried instead on input line 43.
  [2
 
 ]
@@ -1531,6 +1505,27 @@ LaTeX Font Info:    Font shape `TS1/aett/m/sl' in size <10> not available
 (/home/baaske/workspace/RIntro/doc/rintro.vrb) [8
 
 ]
+\openout4 = `rintro.vrb'.
+
+
+(/home/baaske/workspace/RIntro/doc/rintro.vrb)
+Overfull \vbox (15.8324pt too high) detected at line 358
+ []
+
+[9
+
+]
+\openout4 = `rintro.vrb'.
+
+ (/home/baaske/workspace/RIntro/doc/rintro.vrb) [10
+
+]
+\openout4 = `rintro.vrb'.
+
+
+(/home/baaske/workspace/RIntro/doc/rintro.vrb) [11
+
+]
 \tf@nav=\write7
 \openout7 = `rintro.nav'.
 
@@ -1540,23 +1535,22 @@ LaTeX Font Info:    Font shape `TS1/aett/m/sl' in size <10> not available
 \tf@snm=\write9
 \openout9 = `rintro.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 304.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 304.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 404.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 404.
 
 (/home/baaske/workspace/RIntro/doc/rintro.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 304.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 304.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 404.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 404.
 Package rerunfilecheck Info: File `rintro.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
-(\end occurred when \ifx on line 22 was incomplete)
 (\end occurred when \unless\ifcsname on line 22 was incomplete) 
 Here is how much of TeX's memory you used:
- 18436 strings out of 494852
- 341351 string characters out of 6177658
- 405249 words of memory out of 5000000
- 21260 multiletter control sequences out of 15000+600000
- 25052 words of font info for 50 fonts, out of 8000000 for 9000
+ 18457 strings out of 494852
+ 341733 string characters out of 6177658
+ 406447 words of memory out of 5000000
+ 21266 multiletter control sequences out of 15000+600000
+ 26022 words of font info for 53 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  56i,14n,55p,847b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texm
@@ -1564,13 +1558,14 @@ f/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msam7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfst1000.pfb>
-Output written on rintro.pdf (8 pages, 92979 bytes).
+msfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/m
+sam7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfst1000.pfb>
+Output written on rintro.pdf (11 pages, 109831 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
- 17 named destinations out of 1000 (max. 500000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
+ 23 named destinations out of 1000 (max. 500000)
  43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
