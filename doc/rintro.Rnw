@@ -44,6 +44,107 @@ Some useful links are
 \end{frame}
 
 \begin{frame}[fragile]{\proglang{R} Basics}
+<<>>=
+<<echo=FALSE>>=
+options(useFancyQuotes="UTF-8")
+options(digits=4, prompt="R> ")
+@
+<<>>=
+PATH <- getwd()        # get working directory
+INFO <- Sys.info()     # get system info  
+objects()              # show all loaded variables
+ls()                   # objects in your workspace
+@
+Whats is in these objects?
+<<>>=
+PATH
+INFO[c("sysname","nodename","user")]
+@
+\textbf{Important:} On quitting, R offers the option of saving the workspace
+image, by default in the file "*.RData". Use before ending the R session:
+<<eval=FALSE>>=
+rm(list=ls())
+q()
+@
 \end{frame}
-
+%
+\begin{frame}[fragile]{\proglang{R} Help and vectors}
+Getting help:
+<<eval=FALSE>>=
+help()              # general help
+?length             # help for `length`
+help.search(lapply) # help for function `lapply`
+help.start()        # start html help system
+@
+Vectors:
+<<>>=
+2+2
+round(pi,3)
+sqrt(10)
+1000*(1+0.075)^5-1000
+sin(c(30,60,90)*pi/180) 
+@
+\end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} variables and subsetting}
+<<>>=
+a <- 2*3
+a
+a^2
+b <- a^2
+a <- c(17,1,3,9)
+a
+a[2]
+a[c(1,3)]
+a[-2]
+a[2] <- 1
+a
+@
+\end{frame}
+%
+\begin{frame}[fragile]{Characters and categories}
+<<>>=
+(x <- "Hallo")                     # character vector
+(y <- factor(c("C","A","C","B")))  # characters as categories
+(z <- factor(c(1,1,2)))            # numbers as factors
+(x <- c(1,2,3))                    # distroy x and overwrite
+x[4]                               # NA = Not Available
+try(x[4])                          # catch error
+@
+\end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} object classes}
+<<>>=
+class(1.7) # "numeric"
+class(x)   # "character" = character vector
+class(y)   # "factor" categories
+class(z)
+mode(1.7)
+x <- as.integer(x)
+class(x)
+z <- as.character(z)
+class(z)
+@
+\end{frame}
+%
+\begin{frame}[fragile]{Characters and categories}
+<<>>=
+# Save contents of workspace, into the file .RData
+save.image()
+# Save into the file archive.RData
+save.image(file="archive.RData")
+# save single objects
+save(x, y,z, file="tmpobj.RData")
+# save as RDS (could be big data)
+saveRDS(list(x,y,z),file="myfile.rds")
+# read as RDS
+XYZ <- readRDS(file="myfile.rds")
+@
+<<>>=
+# attach (reload) to current workspace
+attach("tmpobj.RData")
+ls()
+@
+\end{frame}
+%
 \end{document}
