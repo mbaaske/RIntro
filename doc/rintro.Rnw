@@ -1,0 +1,26 @@
+% 
+\documentclass[a4paper]{article}
+\usepackage{Sweave}
+\SweaveOpts{keep.source=TRUE}
+\SweaveOpts{engine=R,eps=FALSE}
+
+\usepackage[utf8]{inputenc}
+
+% R -----------------------------------------------
+\let\proglang=\textsf
+\newcommand{\pkg}[1]{{\fontseries{b}\selectfont #1}}
+
+\title{\proglang{R} Basics and Examples - A short introduction}
+\author{Markus Baaske}
+
+\begin{document}
+
+\maketitle
+
+\section{R Basics}
+<<>>=
+x <- c(1:5)
+x
+@
+
+\end{document}
