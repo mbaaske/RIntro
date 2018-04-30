@@ -51,14 +51,14 @@ R> objects()              # show all loaded variables
 \end{Sinput}
 \begin{Soutput}
  [1] "a"    "b"    "d"    "d0"   "d.0"  "d00"  "dd"   "fac"  "g"    "INFO"
-[11] "L3"   "PATH" "x"    "XYZ"  "y"    "z"   
+[11] "L3"   "m"    "M"    "PATH" "x"    "XYZ"  "y"    "z"   
 \end{Soutput}
 \begin{Sinput}
 R> ls()                   # objects in your workspace
 \end{Sinput}
 \begin{Soutput}
  [1] "a"    "b"    "d"    "d0"   "d.0"  "d00"  "dd"   "fac"  "g"    "INFO"
-[11] "L3"   "PATH" "x"    "XYZ"  "y"    "z"   
+[11] "L3"   "m"    "M"    "PATH" "x"    "XYZ"  "y"    "z"   
 \end{Soutput}
 \end{Schunk}
 Whats is in these objects?
@@ -299,7 +299,86 @@ R> ls()
 \end{Sinput}
 \begin{Soutput}
  [1] "a"    "b"    "d"    "d0"   "d.0"  "d00"  "dd"   "fac"  "g"    "INFO"
-[11] "L3"   "PATH" "x"    "XYZ"  "y"    "z"   
+[11] "L3"   "m"    "M"    "PATH" "x"    "XYZ"  "y"    "z"   
+\end{Soutput}
+\end{Schunk}
+\end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} vector repetitions}
+\begin{Schunk}
+\begin{Sinput}
+R> # vectors and repeating components
+R> 10:5
+\end{Sinput}
+\begin{Soutput}
+[1] 10  9  8  7  6  5
+\end{Soutput}
+\begin{Sinput}
+R> -1:2
+\end{Sinput}
+\begin{Soutput}
+[1] -1  0  1  2
+\end{Soutput}
+\begin{Sinput}
+R> # a sequence
+R> seq(5,10)
+\end{Sinput}
+\begin{Soutput}
+[1]  5  6  7  8  9 10
+\end{Soutput}
+\begin{Sinput}
+R> seq(5,10,by=0.1)
+\end{Sinput}
+\begin{Soutput}
+ [1]  5.0  5.1  5.2  5.3  5.4  5.5  5.6  5.7  5.8  5.9  6.0  6.1  6.2  6.3  6.4
+[16]  6.5  6.6  6.7  6.8  6.9  7.0  7.1  7.2  7.3  7.4  7.5  7.6  7.7  7.8  7.9
+[31]  8.0  8.1  8.2  8.3  8.4  8.5  8.6  8.7  8.8  8.9  9.0  9.1  9.2  9.3  9.4
+[46]  9.5  9.6  9.7  9.8  9.9 10.0
+\end{Soutput}
+\begin{Sinput}
+R> # repeat
+R> rep(1:3,times=3)
+\end{Sinput}
+\begin{Soutput}
+[1] 1 2 3 1 2 3 1 2 3
+\end{Soutput}
+\begin{Sinput}
+R> rep(1:3,each=3)
+\end{Sinput}
+\begin{Soutput}
+[1] 1 1 1 2 2 2 3 3 3
+\end{Soutput}
+\end{Schunk}
+\end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} vector repetitions}
+\begin{Schunk}
+\begin{Sinput}
+R> # replicate
+R> x <- 1:5
+R> y <- 3:1
+R> # multiply elements
+R> x*y
+\end{Sinput}
+\begin{Soutput}
+[1]  3  4  3 12 10
+\end{Soutput}
+\begin{Sinput}
+R> (M <- matrix(sample(1:10),nr=5))
+\end{Sinput}
+\begin{Soutput}
+     [,1] [,2]
+[1,]    9    4
+[2,]   10    8
+[3,]    5    7
+[4,]    3    2
+[5,]    1    6
+\end{Soutput}
+\begin{Sinput}
+R> as.numeric(M%*%c(2,2))
+\end{Sinput}
+\begin{Soutput}
+[1] 26 36 24 10 14
 \end{Soutput}
 \end{Schunk}
 \end{frame}
@@ -396,9 +475,31 @@ R> (g <- rbind(g,c("GTB",26)))
 \begin{frame}[fragile]{\proglang{R} data frame object}
 \begin{Schunk}
 \begin{Sinput}
-R> g <- cbind(g,Sem=c(3,1,3,5))
+R> # add category
+R> (g <- cbind(g,Sem=c(3,1,3,5)))
 \end{Sinput}
+\begin{Soutput}
+  StG Anz Sem
+1 GTB  75   3
+2 MPV  11   1
+3 BGM  62   3
+4 GTB  26   5
+\end{Soutput}
+\begin{Sinput}
+R> # add factor level
+R> (g <- rbind(g,data.frame(StG=factor("BGOK"),Anz=57,Sem=3)))
+\end{Sinput}
+\begin{Soutput}
+   StG Anz Sem
+1  GTB  75   3
+2  MPV  11   1
+3  BGM  62   3
+4  GTB  26   5
+5 BGOK  57   3
+\end{Soutput}
 \end{Schunk}
 \end{frame}
 %
+\begin{frame}[fragile]{\proglang{R} data frame object}
+\end{frame}
 \end{document}

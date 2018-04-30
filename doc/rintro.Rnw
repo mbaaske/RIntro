@@ -127,7 +127,7 @@ class(z)
 \end{frame}
 %
 \begin{frame}[fragile]{Characters and categories}
-<<eval=TRUE>>=
+<<eval=FALSE>>=
 # Save contents of workspace, into the file .RData
 		save.image()
 # Save into the file archive.RData
@@ -143,6 +143,32 @@ XYZ <- readRDS(file="myfile.rds")
 # attach (reload) to current workspace
 		attach("tmpobj.RData")
 ls()
+@
+\end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} vector repetitions}
+<<>>=
+# vectors and repeating components
+10:5
+-1:2
+# a sequence
+seq(5,10)
+seq(5,10,by=0.1)
+# repeat
+rep(1:3,times=3)
+rep(1:3,each=3)
+@
+\end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} vector repetitions}
+<<>>=
+# replicate
+x <- 1:5
+y <- 3:1
+# multiply elements
+x*y
+(M <- matrix(sample(1:10),nr=5))
+as.numeric(M%*%c(2,2))
 @
 \end{frame}
 %
@@ -175,8 +201,13 @@ g$Anz[1]   # select first element of `Anz`
 %
 \begin{frame}[fragile]{\proglang{R} data frame object}
 <<>>=
-g <- cbind(g,Sem=c(3,1,3,5))
+# add category
+(g <- cbind(g,Sem=c(3,1,3,5)))
+# add factor level
+(g <- rbind(g,data.frame(StG=factor("BGOK"),Anz=57,Sem=3)))
 @
 \end{frame}
 %
+\begin{frame}[fragile]{\proglang{R} data frame object}
+\end{frame}
 \end{document}

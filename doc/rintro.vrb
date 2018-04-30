@@ -1,6 +1,1 @@
 \frametitle{\proglang {R} data frame object}
-\begin{Schunk}
-\begin{Sinput}
-R> g <- cbind(g,Sem=c(3,1,3,5))
-\end{Sinput}
-\end{Schunk}
