@@ -269,4 +269,34 @@ Check for `NAs` and omit these by functions \textit{is.na()} and
  the standard errors of all month.
 \end{enumerate}
 \end{frame}
+%
+\begin{frame}[fragile]{\proglang{R} Practice - solutions}
+\begin{enumerate}
+ \item 
+<<>>=
+  gg <- rnorm(n=100)
+  s <- sample(gg,size=20)
+  summary(gg)
+  summary(s)
+@
+ \item
+<<>>=
+# sort log normal random variables
+x <- rlnorm(10,0,1)
+sort(x)
+@
+ \item
+<<>>=
+z <- g[-1,]
+z <- cbind(z,Sex=c(10,12))
+z$Anz[1] <- 20
+z <- rbind(z,data.frame(StG=factor("BGOK"),Anz=57,Sex=3))
+@
+ \item
+<<>>=
+@
+\end{enumerate}
+\end{frame}
+
+
 \end{document}

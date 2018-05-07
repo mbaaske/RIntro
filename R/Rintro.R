@@ -7,11 +7,16 @@
 #
 ###############################################################################
 
+# clear current workspace (global environment)
+rm(list=ls())
+
+# get info current R session
 PATH <- getwd()        # get working directory
 INFO <- Sys.info()     # get system info  
 objects()              # show all loaded variables
 ls()                   # objects in your workspace
 
+# show everything
 PATH
 INFO[c("sysname","nodename","user")]
 
