@@ -15,10 +15,10 @@
 \let\proglang=\textsf
 \newcommand{\pkg}[1]{{\fontseries{b}\selectfont #1}}
 
-\title{\proglang{R} Basics and Examples - A short introduction}
+\title{\proglang{R} Basics and Examples - A short introduction\\
+(https://github.com/mbaaske/RIntro.git)}
 \author{Markus Baaske}
 \institute{Faculty of Mathematics and Computer Science (FSU Jena)}
-
 \begin{document}
 
 \maketitle
